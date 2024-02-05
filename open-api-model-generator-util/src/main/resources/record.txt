@@ -1,0 +1,15 @@
+package <REPLACE_PACKAGE>;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+<REPLACE_IMPORT>
+
+/**
+ *<REPLACE_DESCRIPTION>
+ */
+<REPLACE_ANNOTATION>@JsonIgnoreProperties(ignoreUnknown = true)
+public record <REPLACE_NAME>(
+<REPLACE_MEMBERS>
+) {
+}

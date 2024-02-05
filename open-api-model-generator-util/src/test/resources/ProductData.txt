@@ -1,0 +1,21 @@
+package sk.janobono.openapi.test;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+import java.math.BigDecimal;
+import lombok.Builder;
+
+/**
+ *
+ */
+@Builder
+@JsonIgnoreProperties(ignoreUnknown = true)
+public record ProductData(
+        @JsonProperty("code") String code,
+        @JsonProperty("currency") ProductCurrency currency,
+        @JsonProperty("name") String name,
+        @JsonProperty("price") BigDecimal price,
+        @JsonProperty("status") ProductStatus status
+) {
+}

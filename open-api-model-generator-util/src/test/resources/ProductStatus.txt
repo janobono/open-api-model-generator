@@ -1,0 +1,27 @@
+package sk.janobono.openapi.test;
+
+import com.fasterxml.jackson.annotation.JsonValue;
+
+public enum ProductStatus {
+
+    ON_INQUIRE("ON_INQUIRE"),
+    ON_STOCK("ON_STOCK"),
+    OUT_OF_STOCK("OUT_OF_STOCK"),
+    TO_ORDER("TO_ORDER");
+
+    private final String value;
+
+    ProductStatus(String value) {
+        this.value = value;
+    }
+
+    public String getValue() {
+        return value;
+    }
+
+    @JsonValue
+    @Override
+    public String toString() {
+        return value;
+    }
+}

@@ -1,0 +1,25 @@
+package sk.janobono.openapi.test;
+
+import com.fasterxml.jackson.annotation.JsonValue;
+
+public enum ProductCurrency {
+
+    VALUE_0("€"),
+    VALUE_1("$");
+
+    private final String value;
+
+    ProductCurrency(String value) {
+        this.value = value;
+    }
+
+    public String getValue() {
+        return value;
+    }
+
+    @JsonValue
+    @Override
+    public String toString() {
+        return value;
+    }
+}
