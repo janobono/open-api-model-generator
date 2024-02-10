@@ -112,7 +112,7 @@ public class TemplateUtil {
             return string.substring(0, string.length() - 1) + "ies";
         }
         if (string.endsWith("s")) {
-            return string + "es";
+            return string;
         }
         return string + "s";
     }
